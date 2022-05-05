@@ -1,0 +1,111 @@
+{{!-- <section class="column is-one-quarter side-bar is-invisible">
+        {{> sidebar bathroom}}
+    </section>
+     <section class="column is-one-quarter side-bar-post is-invisble">
+        {{> sidebarpost}}
+    </section> --}}
+
+<nav class='wide_screen columns'>
+  <a href='/' class='column is-1'>Home</a>
+  {{#if loggedIn}}
+    <a href='/api/reviews' class='column is-1'>REVIEWS</a>
+    <button
+      id='logout'
+      class='column is-1 is-offset-8 btn-no-style'
+    >LOGOUT</button>
+    <script src='/logout.js'></script>
+  {{else}} {{!why does this not always work when logging in after starting server???}}
+    <a href='/login' class='column is-1 is-offset-8 btn-no-style'>Login</a>
+  {{/if}}
+</nav>
+
+<div class="columns home-content">
+  <div id= "map" data-target= "post-modal" class="column">
+              {{!-- map goes here --}}
+  </div>
+  <div class=" column is-one-quarter ">
+    <div class= "output-input side-bar">
+    
+    {{!--side bar for get by id, add review, and post bathroom here--}}
+    </div>
+  </div>
+</div>
+
+<nav class='mobile_screen columns'>
+  <a href='/' class='column is-1'>H</a>
+  {{#if loggedIn}}
+    <a href='/api/reviews' class='column is-1'>R</a>
+    <button
+      id='logout'
+      class='column is-1 is-offset-8 btn-no-style'
+    >L/O</button>
+    <script src='/logout.js'></script>
+  {{else}} {{!why does this not always work when logging in after starting server???}}
+    <a href='/login' class='column is-1 is-offset-8 btn-no-style'>L/I</a>
+  {{/if}}
+</nav>
+
+<div class="modal" id="post-modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <div class="modal-card-head">
+            <p class="modal-card-title">Restroom Information</p>
+            <button class="delete" aria-label="close"></button>
+          </div>
+          <section class="modal-card-body">
+            <form class="new-post-form">
+              <div>
+                <label for="bathroom-title">Title (Location): </label>
+                <input type="text" id="bathroom-title" name="bathroom-title" />
+              </div>
+              <div>
+                <label for="image-url">Image Link: </label>
+                <input id="image-url" name="image-url" />
+              </div>
+
+
+                <label for="gendered"> Male/Female?</label>
+                  <select id="gendered" name="gendered">
+                    <option value="gendered">yes</option>
+                    <option value="false">no</option>
+                  </select><br>
+
+                <label for="unisex"> Unisex?</label>
+                  <select id="unisex" name="unisex">
+                    <option value="unisex">yes</option>
+                    <option value="false">no</option>
+                  </select><br>
+
+                <label for="disabled"> Disabled Access?</label>
+                  <select id="disabled" name="disabled">
+                    <option value="disabled">yes</option>
+                    <option value="false">no</option>
+                  </select><br>
+
+                <label for="baby"> Changing Tables?</label>
+                  <select id="baby" name="baby">
+                    <option value="changingTables">yes</option>
+                    <option value="false">no</option>
+                  </select><br>
+
+                <label for="period"> Menstruation products?</label>
+                  <select id="period" name="period">
+                    <option value="period">yes</option>
+                    <option value="false">no</option>
+                  </select><br>
+
+                <label for="key"> key?</label>
+                  <select id="key" name="key">
+                    <option value="key">yes</option>
+                    <option value="false">no</option>
+                  </select><br>                                                                                                                     
+            </form>
+          </section>
+          <footer class="modal-card-foot">
+            <button id= "postBathroom"type="submit" class="button">Create</button>
+            <button class="button">Cancel</button>
+          </footer>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+<script src='/assets/map.js'></script>

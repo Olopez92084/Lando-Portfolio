@@ -1,0 +1,196 @@
+
+ .icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+ body {
+  margin: 0 auto;
+  position: relative;
+}
+
+#cf {
+  position: relative;
+}
+
+#cf img {
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  max-width: auto;
+}
+
+@keyframes cf3FadeInOut {
+  0% {
+    opacity:1;
+  }
+  45% {
+  opacity:1;
+  }
+  55% {
+  opacity:0;
+  }
+  100% {
+  opacity:0;
+  }
+} 
+
+#cf img.top {
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 6s;
+animation-direction: alternate;
+animation-delay: 8s;
+} 
+
+#cf img.bottom {
+  position:absolute;
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+  animation-direction: alternate;
+  animation-delay: 4s;
+}
+
+#cf img.bottom2 {
+  position:absolute;
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+  animation-direction: alternate;
+  animation-delay: 1s;
+} 
+
+.airplane {
+  text-align: center;
+}
+
+#id p {
+  background-color: white;
+}
+
+.spaceBt {
+  text-align: center;
+  margin-top:30px;
+}
+
+#buttonPos {
+align-items: center;
+margin-bottom: 10px
+}
+
+#back_button {
+  Width: 8em;
+}
+
+.styleLs  {
+  background-color: aqua;
+}
+
+h5 {
+  border-bottom: 4px sold #26a69a;
+}
+
+#search3 {
+  border: 2px solid #26a69a;
+  border-radius: 6px;
+  overflow: auto;
+  text-align: center;
+}
+
+.search-list {
+  cursor: pointer;
+}
+
+.search-list:hover {
+  font-weight: bold;
+}
+
+#search4 {
+  border: 2px solid #26a69a;
+  overflow: auto;
+  border-radius: 6px;
+  text-align: center;
+}
+
+#search6 {
+  display: flex;
+  justify-content:space-between;
+  align-items: stretch;}
+
+
+.page-footer .container {
+  padding-bottom: 20px;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+#logo-container .material-icons {
+  font-size:50px;
+}
+
+.map {
+  text-align:center;
+  display: flex;
+}
+
+#map {
+  align-items:center;
+  display: flex;
+  width: 95vw; 
+  height: 60vh;
+}
+
+.map-title {
+  text-align:center;
+  padding-bottom: 40px;
+}
+
+.map-space {
+  margin-top: 60px;
+}
+
+.card-header {
+  color: #ff9800;
+}
+
+.subtitle {
+  color: #ff9800
+}
+
+@media screen and (max-width: 425px) {
+    #search6  { 
+    float: none;
+    margin-right:0;
+    width:auto;
+    border:0;
+    border-bottom:2px solid #000;
+    display: block;   
+  }
+  #col10 {
+    height: 10px;
+  }
+
+  #logo-container .material-icons {
+    display: none;
+
+  }
+
+  nav .sidenav-trigger i {
+    display: none;
+  }
+
+  nav .brand-logo {
+    font-size: 20px;
+    width: 100%;
+    align-items:center;
+    text-align: center;
+  }
+}
